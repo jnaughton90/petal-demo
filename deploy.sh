@@ -1,4 +1,9 @@
-revision="$(cat revision.txt)"
+if [ ! -z "revision.txt" ];
+then
+    revision="$(cat revision.txt)"
+else
+    revision="latest"
+fi
 
 #Generate Terraform plan
 terraform -chdir=./terraform plan -out="plan$revision" -var "image_tag=$revision"

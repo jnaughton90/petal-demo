@@ -73,4 +73,8 @@ resource "aws_ecs_service" "petal_api_service" {
     container_name   = local.appname
     container_port   = 8080
   }
+
+  depends_on = [
+    aws_lb_target_group.app_tg
+  ]
 }

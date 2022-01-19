@@ -51,6 +51,10 @@ resource "aws_lb_target_group" "app_tg" {
     path = "/v1/sample"
     timeout = "10"
   }
+
+  depends_on = [
+    aws_lb.app_alb
+  ]
 }
 
 output "dns_name" {
