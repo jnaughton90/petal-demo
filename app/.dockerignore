@@ -1,0 +1,7 @@
+.git
+*Dockerfile*
+bin
+.gradle
+.project
+.classpath
+.settings
