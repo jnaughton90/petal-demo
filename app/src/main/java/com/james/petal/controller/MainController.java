@@ -31,8 +31,8 @@ public class MainController {
 
 		String newValue = "";
 		for (int i = value.length() - 1; i >= 0; i--) {
-	        newValue = newValue + value.charAt(i);
-	    }
+			newValue = newValue + value.charAt(i);
+		}
 		
 		String test = shoutService.getShoutString(newValue);
 		System.out.println(test);
